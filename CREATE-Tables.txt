@@ -1,0 +1,44 @@
+*To Create Database you need to run:*
+CREATE DATABASE Database_name;
+for example to create database School you need to run, CREATE DATABASE School;
+
+*NOTE*: If you are using online editors then above command may fail because there database is already created. Database contains different tables and you need to
+Add tables in that database;
+
+SQL is not case sensititve, so you can write in any case, but  generaly we write commands in Uppercase and other parts in lowercase. 
+
+*Create New Table*
+
+Syntax:
+CREATE TABLE table_name
+(
+ column1 data_type(size),
+ column2 data_type(size),
+ column3 data_type(size),
+....
+);
+fOR EXAMPLE:
+CREATE TABLE Student(
+Roll_no int,
+Name Varchar(20),
+Age int,
+Course Varchar(10)
+);
+
+*ADD Data in Table*
+To add new data in table we use INSERT INTO command;
+There are two ways of using insert into command;
+1) Only Values:
+ INSERT INTO table_name VALUES (value1, value2, value3,...);
+For Example: INSERT INTO Student VALUES ('1','Prashun','SQL','23');
+
+2)Values with column name:
+ INSERT INTO table_name(col1,col2,col3,...) VALUES (value1, value2, value3,...);
+ for Example:
+INSERT INTO Student (Roll_no,Name,Age,Course) VALUES ('2','Rahul','21','C++');
+
+We Need to Add values of Each column in the same order we have defined;
+But you can skip adding few columns, default values will be null there;
+INSERT INTO Student(Name,Age) VALUES ('RAJA','19');
+Here only age and name will be added roll_no and course will be null by default;
+
